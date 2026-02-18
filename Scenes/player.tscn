@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://coxrk822fdpsh"]
+
+[ext_resource type="Script" uid="uid://bd15t1vpxvgff" path="res://Scripts/player.gd" id="1_6t5aa"]
+[ext_resource type="Texture2D" uid="uid://bn4f0g7ex6iqd" path="res://Sprites/fish.jpg" id="2_vgqql"]
+[ext_resource type="Texture2D" uid="uid://c62v3tjw2up6c" path="res://Sprites/grabber.png" id="3_fkybt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p6gg1"]
+size = Vector2(128, 128)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lrus4"]
+radius = 38.0
+
+[node name="Player" type="CharacterBody2D" unique_id=1279327313]
+script = ExtResource("1_6t5aa")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=151556013]
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("2_vgqql")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=510556501]
+shape = SubResource("RectangleShape2D_p6gg1")
+
+[node name="Hand" type="CharacterBody2D" parent="." unique_id=950927238]
+
+[node name="Sprite2D" type="Sprite2D" parent="Hand" unique_id=1432021265]
+position = Vector2(133, -7.999998)
+rotation = -2.485349
+scale = Vector2(0.555, 0.555)
+texture = ExtResource("3_fkybt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hand" unique_id=103608098]
+position = Vector2(235, -9)
+shape = SubResource("CircleShape2D_lrus4")
