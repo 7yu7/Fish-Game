@@ -20,6 +20,11 @@ config/icon="res://Sprites/icon.svg"
 window/size/viewport_width=2304
 window/size/viewport_height=1296
 
+[global_group]
+
+Bullet=""
+GoodBullet=""
+
 [input]
 
 Left={

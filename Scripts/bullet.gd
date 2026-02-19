@@ -19,5 +19,5 @@ func _on_body_entered(body: Node2D) -> void:
 		body.health -= 1
 		print(body.health)
 		queue_free()
-	elif body.name == "Hand":
+	elif body.name == "Hand" or body.is_in_group("GoodBullet"):
 		queue_free()

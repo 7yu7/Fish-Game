@@ -42,8 +42,12 @@ func _physics_process(delta: float) -> void:
 	var angle =  (mouse_pos - global_position).angle()
 	$Hand.rotation = angle
 	
-	$Hand/CollisionShape2D.disabled = !Input.is_action_pressed("Shoot")
-		
+	
+	if Input.is_action_just_pressed("Shoot"):
+		$Hand/CollisionShape2D.disabled = false
+	elif Input.is_action_just_released("Shoot"):
+		$Hand/CollisionShape2D.disabled = true
+	
 	
 	if health == 0:
 		print("DIE")
